@@ -240,7 +240,7 @@ export default function EventsPage() {
       </section>
 
       {/* Past Events */}
-      <section className="container mx-auto px-4 py-20 mt-16">
+      <section className="container mx-auto px-4 py-20 mt-24 pt-8">
         <div
           
           
