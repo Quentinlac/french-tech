@@ -15,7 +15,6 @@ import {
 import Card from '@/components/ui/Card';
 import StatCard from '@/components/ui/StatCard';
 import Button from '@/components/ui/Button';
-import CroatianFundingChart from '@/components/charts/CroatianFundingChart';
 import Link from 'next/link';
 
 // export const metadata: Metadata = {
@@ -145,11 +144,6 @@ export default function CroatiaEcosystemPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Funding Growth Chart */}
-      <section className="container mx-auto px-4 py-20">
-        <CroatianFundingChart />
       </section>
 
       {/* Unicorn Success Stories */}
