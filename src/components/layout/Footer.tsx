@@ -39,7 +39,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-navy text-white mt-20 pt-16">
+    <footer className="bg-navy-950 text-white mt-20 pt-16">
       <div className="container mx-auto px-4 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
@@ -117,7 +117,7 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="border-t border-gray-700 mt-6 pt-6">
+        <div className="border-t border-navy-800 mt-6 pt-6">
           <div className="max-w-md mx-auto text-center md:text-left">
             <h4 className="text-lg font-semibold mb-3">Stay Connected</h4>
             <p className="text-gray-300 mb-4">Get monthly updates on events, opportunities, and ecosystem news.</p>
@@ -129,7 +129,7 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-primary-light"
+                  className="flex-1 px-4 py-2 rounded-lg bg-navy-900 border border-navy-700 text-white placeholder-navy-400 focus:outline-none focus:border-primary-light"
                 />
                 <button
                   type="submit"
@@ -149,7 +149,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+        <div className="border-t border-navy-800 mt-6 pt-6 text-center text-navy-400">
           <p>© {currentYear} French Innovation Club Croatia. All rights reserved.</p>
         </div>
       </div>

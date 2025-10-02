@@ -89,17 +89,37 @@ export default function CroatiaEcosystemPage() {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 mb-20">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Croatia: Europe's <span className="text-secondary">Rising Tech Powerhouse</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Two unicorns worth $12B+. 80,000+ ICT specialists. $5B raised by 734 startups.
-            The Croatian tech scene is no longer emerging—it has arrived.
-          </p>
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/5 dark:from-primary/10 dark:via-gray-900 dark:to-secondary/10">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,85,164,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,85,164,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center px-5 py-2 bg-accent/20 rounded-full mb-8 hover:bg-accent/30 transition-colors duration-300">
+              <span className="text-accent-dark font-medium text-sm md:text-base">🇭🇷 Croatian Ecosystem</span>
+            </div>
+
+            {/* Main headline */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+              Croatia: Europe's <span className="text-secondary">Rising Tech Powerhouse</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
+              Two unicorns worth $12B+. 80,000+ ICT specialists. $5B raised by 734 startups.
+              The Croatian tech scene is no longer emerging—it has arrived.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -121,28 +141,28 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Unicorn Success Stories */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-navy-950 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Unicorn Success Stories</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Unicorn Success Stories</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {unicorns.map((unicorn) => (
-              <Card key={unicorn.name} className="h-full">
+              <Card key={unicorn.name} className="h-full bg-navy-900 border-navy-700">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-secondary">{unicorn.name}</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Founded {unicorn.founded}</p>
+                    <p className="text-navy-200">Founded {unicorn.founded}</p>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-accent-dark">{unicorn.valuation}</div>
-                    <div className="text-sm text-gray-500">Valuation</div>
+                    <div className="text-sm text-navy-300">Valuation</div>
                   </div>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">{unicorn.description}</p>
+                <p className="text-navy-200 mb-4">{unicorn.description}</p>
                 <ul className="space-y-2">
                   {unicorn.highlights.map((highlight) => (
                     <li key={highlight} className="flex items-start">
                       <span className="text-secondary mr-2">•</span>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">{highlight}</span>
+                      <span className="text-sm text-navy-200">{highlight}</span>
                     </li>
                   ))}
                 </ul>
@@ -152,7 +172,7 @@ export default function CroatiaEcosystemPage() {
 
           {/* Other Success Stories */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold mb-4 text-center">Rising Stars & Recent Exits</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-center text-white">Rising Stars & Recent Exits</h3>
             <div className="grid md:grid-cols-4 gap-4">
               {[
                 { name: 'Photomath', sector: 'EdTech (Acquired by Google €500M)' },
@@ -160,9 +180,9 @@ export default function CroatiaEcosystemPage() {
                 { name: 'Fonoa', sector: 'Global Tax Compliance' },
                 { name: 'AGRIVI', sector: 'Agricultural Technology' }
               ].map((company) => (
-                <Card key={company.name} className="text-center p-4">
-                  <h4 className="font-bold text-lg">{company.name}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{company.sector}</p>
+                <Card key={company.name} className="text-center p-4 bg-navy-900 border-navy-700">
+                  <h4 className="font-bold text-lg text-white">{company.name}</h4>
+                  <p className="text-sm text-navy-200 mt-1">{company.sector}</p>
                 </Card>
               ))}
             </div>
@@ -192,21 +212,21 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Government Support */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-navy-950 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Government Support</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Government Support</h2>
           <div className="text-center mb-8">
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-lg text-navy-200">
               <span className="font-bold">HAMAG-BICRO</span> - Croatian Agency for SMEs, Innovation, and Investments
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {governmentSupport.map((support) => (
-              <Card key={support.program} className="text-center h-full">
+              <Card key={support.program} className="text-center h-full bg-navy-900 border-navy-700">
                 <Briefcase className="text-accent-dark mx-auto mb-3" size={24} />
-                <h4 className="font-bold text-lg mb-1">{support.amount}</h4>
-                <p className="text-sm font-medium mb-2">{support.program}</p>
-                <p className="text-xs text-gray-500">{support.description}</p>
+                <h4 className="font-bold text-lg mb-1 text-white">{support.amount}</h4>
+                <p className="text-sm font-medium mb-2 text-navy-200">{support.program}</p>
+                <p className="text-xs text-navy-300">{support.description}</p>
               </Card>
             ))}
           </div>

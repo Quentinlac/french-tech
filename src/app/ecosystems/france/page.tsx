@@ -137,17 +137,37 @@ export default function FranceEcosystemPage() {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 mb-20">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            France: Europe's <span className="text-primary">Innovation Powerhouse</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            31 unicorns worth $74B. €8 billion raised in 2024. 81,000+ startups.
-            Europe's 3rd largest tech ecosystem leading AI and deep tech innovation.
-          </p>
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/5 dark:from-primary/10 dark:via-gray-900 dark:to-secondary/10">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,85,164,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,85,164,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center px-5 py-2 bg-accent/20 rounded-full mb-8 hover:bg-accent/30 transition-colors duration-300">
+              <span className="text-accent-dark font-medium text-sm md:text-base">🇫🇷 French Ecosystem</span>
+            </div>
+
+            {/* Main headline */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+              France: Europe's <span className="text-primary">Innovation Powerhouse</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
+              31 unicorns worth $74B. €8 billion raised in 2024. 81,000+ startups.
+              Europe's 3rd largest tech ecosystem leading AI and deep tech innovation.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -169,28 +189,28 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Unicorn Gallery */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-navy-950 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Top Unicorns</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Top Unicorns</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {topUnicorns.map((unicorn) => (
-              <Card key={unicorn.name} className="h-full">
+              <Card key={unicorn.name} className="h-full bg-navy-900 border-navy-700">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-primary">{unicorn.name}</h3>
-                    <p className="text-gray-600 dark:text-gray-400">{unicorn.sector}</p>
+                    <p className="text-navy-200">{unicorn.sector}</p>
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-accent-dark">{unicorn.valuation}</div>
-                    <div className="text-sm text-gray-500">Valuation</div>
+                    <div className="text-sm text-navy-300">Valuation</div>
                   </div>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">{unicorn.description}</p>
+                <p className="text-navy-200 mb-4">{unicorn.description}</p>
                 <ul className="space-y-2">
                   {unicorn.highlights.map((highlight) => (
                     <li key={highlight} className="flex items-start">
                       <span className="text-primary mr-2">•</span>
-                      <span className="text-sm text-gray-600 dark:text-gray-400">{highlight}</span>
+                      <span className="text-sm text-navy-200">{highlight}</span>
                     </li>
                   ))}
                 </ul>
@@ -200,16 +220,16 @@ export default function FranceEcosystemPage() {
 
           {/* AI Revolution */}
           <div className="mt-12 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-center">The AI & Deep Tech Revolution</h3>
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">The AI & Deep Tech Revolution</h3>
             <div className="grid md:grid-cols-5 gap-4 text-center">
               {['Mistral AI', 'HuggingFace', 'Poolside', 'Dataiku', 'Pasqal'].map((company) => (
-                <div key={company} className="bg-white dark:bg-gray-800 rounded-lg p-4">
-                  <Brain className="text-primary mx-auto mb-2" size={24} />
-                  <p className="font-semibold">{company}</p>
+                <div key={company} className="bg-navy-800 rounded-lg p-4">
+                  <Brain className="text-primary-300 mx-auto mb-2" size={24} />
+                  <p className="font-semibold text-white">{company}</p>
                 </div>
               ))}
             </div>
-            <p className="text-center mt-4 text-gray-600 dark:text-gray-400">
+            <p className="text-center mt-4 text-navy-200">
               Leading AI unicorns & quantum computing pioneer
             </p>
           </div>
@@ -238,16 +258,16 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Sector Distribution */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-navy-950 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">2024 Funding by Sector</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">2024 Funding by Sector</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {sectors.map((sector) => (
-              <Card key={sector.name} className="text-center">
+              <Card key={sector.name} className="text-center bg-navy-900 border-navy-700">
                 <Zap className="text-accent-dark mx-auto mb-2" size={24} />
-                <h4 className="font-bold text-lg">{sector.name}</h4>
+                <h4 className="font-bold text-lg text-white">{sector.name}</h4>
                 <p className="text-2xl font-bold text-primary my-2">{sector.percentage}</p>
-                <p className="text-sm text-gray-500">{sector.trend}</p>
+                <p className="text-sm text-navy-300">{sector.trend}</p>
               </Card>
             ))}
           </div>
