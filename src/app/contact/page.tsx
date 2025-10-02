@@ -76,7 +76,7 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Get in <span className="text-primary">Touch</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
             Have a question? Want to partner? Looking for opportunities?
             We'd love to hear from you.
           </p>
@@ -242,7 +242,7 @@ export default function ContactPage() {
       </div>
 
       {/* Quick Actions */}
-      <section className="container mx-auto px-4 mt-16">
+      <section className="container mx-auto px-4 mt-16 pt-16">
         <div
           
           

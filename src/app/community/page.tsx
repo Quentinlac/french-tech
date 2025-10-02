@@ -23,7 +23,7 @@ export default function CommunityPage() {
       </div>
 
       {/* Benefits Section */}
-      <div className="container mx-auto px-4 mb-12">
+      <div className="container mx-auto px-4 mb-12 mt-8 pb-16">
         <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">

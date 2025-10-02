@@ -436,7 +436,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-16 mt-16">
         <div
           
           
@@ -464,7 +464,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Data Sources */}
-      <section className="container mx-auto px-4 pb-16">
+      <section className="container mx-auto px-4 pb-16 mt-16">
         <div className="text-center">
           <p className="text-sm text-gray-500 dark:text-gray-400">
             <strong>Data Sources:</strong> Tracxn Unicorn Analytics Sept 2025 | La French Tech Next40/120 2025 |
