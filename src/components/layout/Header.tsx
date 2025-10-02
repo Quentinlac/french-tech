@@ -11,13 +11,24 @@ const Header = () => {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOverDarkSection, setIsOverDarkSection] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+
+      // Check if navbar is over a dark section
+      const navbarHeight = 96; // h-24 = 96px
+      const elements = document.elementsFromPoint(window.innerWidth / 2, navbarHeight);
+      const hasDarkSection = elements.some(el =>
+        el.classList.contains('bg-navy-950') ||
+        el.closest('.bg-navy-950')
+      );
+      setIsOverDarkSection(hasDarkSection);
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -34,7 +45,11 @@ const Header = () => {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+        isOverDarkSection
+          ? 'bg-navy-950/90 backdrop-blur-md shadow-md'
+          : isScrolled
+            ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md'
+            : 'bg-transparent'
       )}
     >
       <nav className="container mx-auto px-4">
@@ -59,9 +74,12 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative text-foreground hover:text-primary transition-colors duration-200 font-medium py-2",
-                    isActive && "text-primary",
-                    isActive && "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
+                    "relative transition-colors duration-200 font-medium py-2",
+                    isOverDarkSection
+                      ? "text-white hover:text-primary-300"
+                      : "text-foreground hover:text-primary",
+                    isActive && (isOverDarkSection ? "text-primary-300" : "text-primary"),
+                    isActive && `after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:rounded-full ${isOverDarkSection ? 'after:bg-primary-300' : 'after:bg-primary'}`
                   )}
                 >
                   {link.label}
@@ -72,7 +90,12 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className={cn(
+              "md:hidden transition-colors",
+              isOverDarkSection
+                ? "text-white hover:text-primary-300"
+                : "text-foreground hover:text-primary"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
