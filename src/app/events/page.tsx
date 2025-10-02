@@ -101,22 +101,39 @@ export default function EventsPage() {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 mb-16">
-        <div
-          
-          
-          
-          className="text-center max-w-4xl mx-auto"
-        >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Building <span className="text-primary">Community</span> Through Events
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
-            Join us as we create meaningful connections between French and Croatian tech ecosystems
-            through carefully curated events and experiences.
-          </p>
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/5 dark:from-primary/10 dark:via-gray-900 dark:to-secondary/10">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
+
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,85,164,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,85,164,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center px-5 py-2 bg-accent/20 rounded-full mb-8 hover:bg-accent/30 transition-colors duration-300">
+              <span className="text-accent-dark font-medium text-sm md:text-base">📅 Building Community</span>
+            </div>
+
+            {/* Main headline */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+              Events That{' '}
+              <span className="text-primary">Connect</span> and{' '}
+              <span className="text-secondary">Inspire</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
+              Join us as we create meaningful connections between French and Croatian tech ecosystems
+              through carefully curated events and experiences.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -164,14 +181,14 @@ export default function EventsPage() {
 
           >
             <h2 className="text-3xl font-bold text-center mb-8 text-white">Upcoming Events</h2>
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="flex justify-center">
               {upcomingEvents.map((event, index) => (
                 <div
                   key={event.id}
-                  
-                  
-                  
-                  
+                  className="max-w-md"
+
+
+
                 >
                   <Card hover className="h-full flex flex-col bg-navy-900 border-navy-700">
                     <div className="mb-4">
