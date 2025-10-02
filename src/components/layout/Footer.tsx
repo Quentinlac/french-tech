@@ -51,7 +51,7 @@ const Footer = () => {
                 alt="French Innovation Club Croatia"
                 width={200}
                 height={57}
-                className="h-14 w-auto"
+                className="h-14 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-gray-300 mb-4">

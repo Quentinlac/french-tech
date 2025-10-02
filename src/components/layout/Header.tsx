@@ -61,7 +61,10 @@ const Header = () => {
               alt="French Innovation Club Croatia"
               width={240}
               height={68}
-              className="h-17 w-auto"
+              className={cn(
+                "h-17 w-auto transition-all duration-300",
+                isOverDarkSection && "brightness-0 invert"
+              )}
             />
           </Link>
 
