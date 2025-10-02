@@ -43,10 +43,10 @@ const PartnersSection = () => {
             <span className="text-primary font-medium">Our Supporters</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Supported By Leading Organizations
+            Backed By Key Decision Makers
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            From tech giants to innovative startups, ecosystem builders, and government institutions
+            Leaders and decision makers from tech giants, innovative startups, ecosystem builders, and government institutions
           </p>
         </div>
 
