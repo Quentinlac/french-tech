@@ -242,7 +242,7 @@ export default function ContactPage() {
       </div>
 
       {/* Quick Actions */}
-      <section className="container mx-auto px-4 mt-16 pt-16">
+      <section className="container mx-auto px-4 mt-24 pt-16">
         <div
           
           
