@@ -10,7 +10,7 @@ const WhoWeAreSection = () => {
   const team = [
     {
       name: "Quentin Lacointa",
-      role: "President & Co-Founder",
+      role: "Founding Member",
       background: [
         "CEO of Trezy",
         "Previously built one of Europe's leading tech education companies",
@@ -21,7 +21,7 @@ const WhoWeAreSection = () => {
     },
     {
       name: "Guillaume Rabhi",
-      role: "Co-Founder",
+      role: "Founding Member",
       background: [
         "CDO at AGRIVI",
         "Deep connections in both French and Croatian tech ecosystems",
