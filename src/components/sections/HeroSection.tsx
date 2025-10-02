@@ -57,13 +57,13 @@ const HeroSection = () => {
               <div className="text-3xl md:text-4xl font-bold text-accent-dark mb-2">
                 <CountUp end={5} suffix="B" prefix="$" duration={2200} />
               </div>
-              <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Croatian VC</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Total Funding</div>
             </div>
             <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur rounded-xl p-6 border border-gray-200/50 dark:border-gray-700/50 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                 <CountUp end={8} suffix="B" prefix="€" duration={2500} />
               </div>
-              <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">French VC 2024</div>
+              <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">Funding 2024</div>
             </div>
           </div>
 
