@@ -124,19 +124,21 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Key Statistics */}
-      <section className="container mx-auto px-4 mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Key Statistics</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {keyStats.map((stat) => (
-            <StatCard
-              key={stat.label}
-              label={stat.label}
-              value={stat.value}
-              icon={stat.icon}
-              trend={stat.trend}
-              color="secondary"
-            />
-          ))}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Key Statistics</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {keyStats.map((stat) => (
+              <StatCard
+                key={stat.label}
+                label={stat.label}
+                value={stat.value}
+                icon={stat.icon}
+                trend={stat.trend}
+                color="secondary"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -191,23 +193,25 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Tech Hubs */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Tech Hubs & Infrastructure</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {techHubs.map((hub) => (
-            <Card key={hub.city} hover className="h-full">
-              <Building2 className="text-secondary mb-3" size={24} />
-              <h3 className="text-xl font-bold mb-2">{hub.city}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{hub.description}</p>
-              <ul className="space-y-1">
-                {hub.facilities.map((facility) => (
-                  <li key={facility} className="text-sm text-gray-500 dark:text-gray-500">
-                    • {facility}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          ))}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Tech Hubs & Infrastructure</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {techHubs.map((hub) => (
+              <Card key={hub.city} hover className="h-full">
+                <Building2 className="text-secondary mb-3" size={24} />
+                <h3 className="text-xl font-bold mb-2">{hub.city}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{hub.description}</p>
+                <ul className="space-y-1">
+                  {hub.facilities.map((facility) => (
+                    <li key={facility} className="text-sm text-gray-500 dark:text-gray-500">
+                      • {facility}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -234,58 +238,64 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Why Croatia for French Companies */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Why Croatia for <span className="text-primary">French Companies</span>?
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {[
-            { title: 'Talent Pool', desc: '7,000+ ICT students annually', icon: Users },
-            { title: 'Cost Advantage', desc: '30-50% lower than Western Europe', icon: TrendingUp },
-            { title: 'Time Zone', desc: 'Same as France (CET)', icon: Globe },
-            { title: 'EU & Eurozone', desc: 'EU since 2013, Euro since 2023', icon: Award },
-            { title: 'English Fluency', desc: '#11 globally, Very High', icon: BookOpen },
-            { title: 'Strategic Location', desc: 'Gateway to Southeast Europe', icon: Building2 }
-          ].map((item) => (
-            <Card key={item.title} hover className="text-center p-6">
-              <item.icon className="text-primary mx-auto mb-3" size={32} />
-              <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
-            </Card>
-          ))}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Why Croatia for <span className="text-primary">French Companies</span>?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { title: 'Talent Pool', desc: '7,000+ ICT students annually', icon: Users },
+              { title: 'Cost Advantage', desc: '30-50% lower than Western Europe', icon: TrendingUp },
+              { title: 'Time Zone', desc: 'Same as France (CET)', icon: Globe },
+              { title: 'EU & Eurozone', desc: 'EU since 2013, Euro since 2023', icon: Award },
+              { title: 'English Fluency', desc: '#11 globally, Very High', icon: BookOpen },
+              { title: 'Strategic Location', desc: 'Gateway to Southeast Europe', icon: Building2 }
+            ].map((item) => (
+              <Card key={item.title} hover className="text-center p-6">
+                <item.icon className="text-primary mx-auto mb-3" size={32} />
+                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="bg-gradient-to-r from-secondary/10 to-primary/10 rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Explore Croatian Tech Opportunities</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Discover the fastest-growing tech ecosystem in the EU. Join our community to learn about partnerships, talent, and investment opportunities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/community">
-              <Button variant="secondary" size="lg">
-                Join the Community
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button variant="outline" size="lg">
-                Get in Touch
-              </Button>
-            </Link>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-secondary/10 to-primary/10 rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold mb-4">Explore Croatian Tech Opportunities</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              Discover the fastest-growing tech ecosystem in the EU. Join our community to learn about partnerships, talent, and investment opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/community">
+                <Button variant="secondary" size="lg">
+                  Join the Community
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline" size="lg">
+                  Get in Touch
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Data Sources */}
-      <section className="container mx-auto px-4 pb-20">
-        <div className="text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            <strong>Data Sources:</strong> StartupBlink Global Ecosystem Index 2025 | WIPO Global Innovation Index |
-            EF English Proficiency Index 2025 | Emerging Europe IT Competitiveness Report 2024 |
-            EU Digital Decade Report 2024 | Tracxn Startup Analytics | Company Reports
-          </p>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              <strong>Data Sources:</strong> StartupBlink Global Ecosystem Index 2025 | WIPO Global Innovation Index |
+              EF English Proficiency Index 2025 | Emerging Europe IT Competitiveness Report 2024 |
+              EU Digital Decade Report 2024 | Tracxn Startup Analytics | Company Reports
+            </p>
+          </div>
         </div>
       </section>
     </div>

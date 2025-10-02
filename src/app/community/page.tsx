@@ -87,9 +87,11 @@ export default function CommunityPage() {
       </section>
 
       {/* Form Section */}
-      <div className="container mx-auto px-4">
-        <JoinForm />
-      </div>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <JoinForm />
+        </div>
+      </section>
     </div>
   );
 }

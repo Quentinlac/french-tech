@@ -172,19 +172,21 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Key Statistics */}
-      <section className="container mx-auto px-4 mb-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Key Metrics</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {keyStats.map((stat) => (
-            <StatCard
-              key={stat.label}
-              label={stat.label}
-              value={stat.value}
-              icon={stat.icon}
-              trend={stat.trend}
-              color="primary"
-            />
-          ))}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Key Metrics</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {keyStats.map((stat) => (
+              <StatCard
+                key={stat.label}
+                label={stat.label}
+                value={stat.value}
+                icon={stat.icon}
+                trend={stat.trend}
+                color="primary"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -237,23 +239,25 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Tech Hubs */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Innovation Hubs</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {techHubs.map((hub) => (
-            <Card key={hub.city} hover className="h-full">
-              <Building2 className="text-primary mb-3" size={24} />
-              <h3 className="text-xl font-bold mb-1">{hub.city}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{hub.title}</p>
-              <ul className="space-y-1">
-                {hub.highlights.map((highlight) => (
-                  <li key={highlight} className="text-sm text-gray-500 dark:text-gray-500">
-                    • {highlight}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          ))}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Innovation Hubs</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {techHubs.map((hub) => (
+              <Card key={hub.city} hover className="h-full">
+                <Building2 className="text-primary mb-3" size={24} />
+                <h3 className="text-xl font-bold mb-1">{hub.city}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{hub.title}</p>
+                <ul className="space-y-1">
+                  {hub.highlights.map((highlight) => (
+                    <li key={highlight} className="text-sm text-gray-500 dark:text-gray-500">
+                      • {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -275,109 +279,119 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Government Support */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Government Support Programs</h2>
-        <div className="text-center mb-8">
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            <span className="font-bold">Bpifrance</span> backs 30% of seed and VC investments
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {governmentPrograms.map((program) => (
-            <Card key={program.name} className="text-center h-full">
-              <Euro className="text-primary mx-auto mb-3" size={24} />
-              <h4 className="font-bold text-lg mb-1">{program.amount}</h4>
-              <p className="text-sm font-medium mb-2">{program.name}</p>
-              <p className="text-xs text-gray-500">{program.desc}</p>
-            </Card>
-          ))}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Government Support Programs</h2>
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              <span className="font-bold">Bpifrance</span> backs 30% of seed and VC investments
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {governmentPrograms.map((program) => (
+              <Card key={program.name} className="text-center h-full">
+                <Euro className="text-primary mx-auto mb-3" size={24} />
+                <h4 className="font-bold text-lg mb-1">{program.amount}</h4>
+                <p className="text-sm font-medium mb-2">{program.name}</p>
+                <p className="text-xs text-gray-500">{program.desc}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* La French Tech */}
-      <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-20">
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">La French Tech Initiative</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              <Card className="text-center">
-                <p className="text-3xl font-bold text-primary">120</p>
-                <p className="text-sm">Next40/120 Scale-ups</p>
-              </Card>
-              <Card className="text-center">
-                <p className="text-3xl font-bold text-primary">€10B</p>
-                <p className="text-sm">Combined 2025 Revenue</p>
-              </Card>
-              <Card className="text-center">
-                <p className="text-3xl font-bold text-primary">42,000</p>
-                <p className="text-sm">Jobs Created</p>
-              </Card>
-              <Card className="text-center">
-                <p className="text-3xl font-bold text-primary">€2.8B</p>
-                <p className="text-sm">AI Foundation (5 years)</p>
-              </Card>
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8">
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6">La French Tech Initiative</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <Card className="text-center">
+                  <p className="text-3xl font-bold text-primary">120</p>
+                  <p className="text-sm">Next40/120 Scale-ups</p>
+                </Card>
+                <Card className="text-center">
+                  <p className="text-3xl font-bold text-primary">€10B</p>
+                  <p className="text-sm">Combined 2025 Revenue</p>
+                </Card>
+                <Card className="text-center">
+                  <p className="text-3xl font-bold text-primary">42,000</p>
+                  <p className="text-sm">Jobs Created</p>
+                </Card>
+                <Card className="text-center">
+                  <p className="text-3xl font-bold text-primary">€2.8B</p>
+                  <p className="text-sm">AI Foundation (5 years)</p>
+                </Card>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                97% of Next40/120 companies use AI daily. 44% are profitable.
+                93% have international commercial presence.
+              </p>
             </div>
-            <p className="text-gray-600 dark:text-gray-300">
-              97% of Next40/120 companies use AI daily. 44% are profitable.
-              93% have international commercial presence.
-            </p>
           </div>
         </div>
       </section>
 
       {/* Why France for Croatian Startups */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Why France for <span className="text-secondary">Croatian Startups</span>?
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {[
-            { title: 'Market Size', desc: '68 million consumers', icon: Users },
-            { title: 'EU Gateway', desc: 'Access to 450M EU citizens', icon: Globe },
-            { title: 'Funding Access', desc: 'Europe\'s 2nd largest VC market', icon: Euro },
-            { title: 'AI Leadership', desc: 'Top European AI ecosystem', icon: Brain },
-            { title: 'Government Support', desc: 'Extensive grant programs', icon: Award },
-            { title: 'Talent Pool', desc: 'World-class engineering schools', icon: Building2 }
-          ].map((item) => (
-            <Card key={item.title} hover className="text-center p-6">
-              <item.icon className="text-primary mx-auto mb-3" size={32} />
-              <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
-            </Card>
-          ))}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Why France for <span className="text-secondary">Croatian Startups</span>?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { title: 'Market Size', desc: '68 million consumers', icon: Users },
+              { title: 'EU Gateway', desc: 'Access to 450M EU citizens', icon: Globe },
+              { title: 'Funding Access', desc: 'Europe\'s 2nd largest VC market', icon: Euro },
+              { title: 'AI Leadership', desc: 'Top European AI ecosystem', icon: Brain },
+              { title: 'Government Support', desc: 'Extensive grant programs', icon: Award },
+              { title: 'Talent Pool', desc: 'World-class engineering schools', icon: Building2 }
+            ].map((item) => (
+              <Card key={item.title} hover className="text-center p-6">
+                <item.icon className="text-primary mx-auto mb-3" size={32} />
+                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Discover French Tech Opportunities</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Learn how to access Europe's most dynamic tech ecosystem. Join our community to explore partnerships, funding, and market entry strategies.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/community">
-              <Button variant="primary" size="lg">
-                Join the Community
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button variant="outline" size="lg">
-                Schedule a Meeting
-              </Button>
-            </Link>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold mb-4">Discover French Tech Opportunities</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              Learn how to access Europe's most dynamic tech ecosystem. Join our community to explore partnerships, funding, and market entry strategies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/community">
+                <Button variant="primary" size="lg">
+                  Join the Community
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline" size="lg">
+                  Schedule a Meeting
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Data Sources */}
-      <section className="container mx-auto px-4 pb-20">
-        <div className="text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            <strong>Data Sources:</strong> Tracxn Unicorn Analytics Sept 2025 | La French Tech Next40/120 2025 |
-            TechCrunch 2024 Funding Report | Station F Impact Report | Dealroom 2024 |
-            Mistral AI Series C Announcement | StartupBlink Global Index 2025
-          </p>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              <strong>Data Sources:</strong> Tracxn Unicorn Analytics Sept 2025 | La French Tech Next40/120 2025 |
+              TechCrunch 2024 Funding Report | Station F Impact Report | Dealroom 2024 |
+              Mistral AI Series C Announcement | StartupBlink Global Index 2025
+            </p>
+          </div>
         </div>
       </section>
     </div>
