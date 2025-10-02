@@ -23,14 +23,15 @@ const partners: Partner[] = [
   { name: 'Orqa', logo: '/orqa-logo.png', category: 'startup' },
   { name: 'Degordian', logo: '/degordian-logo.jpeg', category: 'startup' },
 
-  // Ecosystem & Institutions
+  // Ecosystem & VCs
   { name: 'Nuqleus', logo: '/nuqleus-logo.svg', category: 'ecosystem' },
   { name: 'BIRD Incubator', logo: '/bird-logo.png', category: 'ecosystem' },
   { name: 'ICENT', logo: '/icent-logo.png', category: 'ecosystem' },
   { name: 'ZICER', logo: '/zicer-logo.svg', category: 'ecosystem' },
   { name: 'AYMO Ventures', logo: '/aymo-logo.svg', category: 'ecosystem' },
+  { name: 'Fil Rouge Capital', logo: '/filrouge-logo.svg', category: 'ecosystem' },
+  { name: 'Feelsgood Capital', logo: '/feelsgood-logo.svg', category: 'ecosystem' },
   { name: 'Invera', logo: '/invera-logo.png', category: 'ecosystem' },
-  { name: 'French Embassy', logo: '/france-embassy-logo.jpg', category: 'institution' },
 ];
 
 const PartnersSection = () => {
