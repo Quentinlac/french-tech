@@ -5,6 +5,7 @@ import { Mail, MapPin, Linkedin, Send, CheckCircle } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
+import { API_URL } from '@/lib/config';
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,7 +25,7 @@ export default function ContactPage() {
         message: formData.get('message')
       };
 
-      const response = await fetch('http://localhost:8080/api/contact', {
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

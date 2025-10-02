@@ -15,6 +15,7 @@ import {
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import Link from 'next/link';
+import { API_URL } from '@/lib/config';
 
 export default function EventsPage() {
   const [newsletterEmail, setNewsletterEmail] = useState('');
@@ -28,7 +29,7 @@ export default function EventsPage() {
     setIsSubmitting(true);
     setMessage(null);
     try {
-      const response = await fetch('http://localhost:8080/api/newsletter', {
+      const response = await fetch(`${API_URL}/api/newsletter`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: newsletterEmail })

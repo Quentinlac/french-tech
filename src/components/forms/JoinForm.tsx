@@ -7,6 +7,7 @@ import * as z from 'zod';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import { CheckCircle, Loader2, AlertCircle } from 'lucide-react';
+import { API_URL } from '@/lib/config';
 
 const joinFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -44,7 +45,7 @@ const JoinForm = () => {
   const onSubmit = async (data: JoinFormData) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:8080/api/join', {
+      const response = await fetch(`${API_URL}/api/join`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

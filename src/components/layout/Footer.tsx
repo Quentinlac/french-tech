@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Linkedin, Mail, MapPin } from 'lucide-react';
+import { API_URL } from '@/lib/config';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +19,7 @@ const Footer = () => {
     setIsSubmitting(true);
     setMessage(null);
     try {
-      const response = await fetch('http://localhost:8080/api/newsletter', {
+      const response = await fetch(`${API_URL}/api/newsletter`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
