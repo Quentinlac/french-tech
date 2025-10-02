@@ -18,9 +18,9 @@ const partners: Partner[] = [
 
   // Startups & Scale-ups
   { name: 'AGRIVI', logo: '/agrivi-logo.svg', category: 'startup' },
-  { name: 'Fonoa', logo: '/fonoa-logo.svg', category: 'startup' },
+  { name: 'Fonoa', logo: '/fonoa-logo-dark.svg', category: 'startup' },
   { name: 'Trezy', logo: '/trezy-logo.svg', category: 'startup' },
-  { name: 'Orqa', logo: '/bird-logo.png', category: 'startup' },
+  { name: 'Orqa', logo: '/orqa-logo.png', category: 'startup' },
   { name: 'Degordian', logo: '/degordian-logo.jpeg', category: 'startup' },
 
   // Ecosystem & Institutions
@@ -28,6 +28,7 @@ const partners: Partner[] = [
   { name: 'BIRD Incubator', logo: '/bird-logo.png', category: 'ecosystem' },
   { name: 'ICENT', logo: '/icent-logo.png', category: 'ecosystem' },
   { name: 'ZICER', logo: '/zicer-logo.svg', category: 'ecosystem' },
+  { name: 'AYMO Ventures', logo: '/aymo-logo.svg', category: 'ecosystem' },
   { name: 'Invera', logo: '/invera-logo.png', category: 'ecosystem' },
   { name: 'French Embassy', logo: '/france-embassy-logo.jpg', category: 'institution' },
 ];
