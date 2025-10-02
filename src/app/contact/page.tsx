@@ -83,7 +83,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 mb-16">
+      <div className="container mx-auto px-4 mb-24">
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Contact Information */}
           <div

@@ -147,7 +147,7 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Unicorn Success Stories */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-gray-50 dark:bg-gray-900 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
             
@@ -218,7 +218,7 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Tech Hubs */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20 mt-16">
         <div
           
           
@@ -254,7 +254,7 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Government Support */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-gray-50 dark:bg-gray-900 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
             
@@ -291,7 +291,7 @@ export default function CroatiaEcosystemPage() {
       </section>
 
       {/* Why Croatia for French Companies */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20 mt-16">
         <div
           
           

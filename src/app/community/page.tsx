@@ -65,7 +65,7 @@ export default function CommunityPage() {
       </div>
 
       {/* Form Section */}
-      <div className="container mx-auto px-4 mt-16">
+      <div className="container mx-auto px-4 mt-24 pt-8">
         <JoinForm />
       </div>
     </div>

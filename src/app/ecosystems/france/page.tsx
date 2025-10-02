@@ -189,7 +189,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Unicorn Gallery */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-gray-50 dark:bg-gray-900 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
             
@@ -258,7 +258,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Tech Hubs */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20 mt-16">
         <div
           
           
@@ -294,7 +294,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Sector Distribution */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-gray-50 dark:bg-gray-900 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
             
@@ -326,7 +326,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Government Support */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20 mt-16">
         <div
           
           
@@ -361,7 +361,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* La French Tech */}
-      <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-20">
+      <section className="bg-gradient-to-br from-primary/5 to-accent/5 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
             
@@ -398,7 +398,7 @@ export default function FranceEcosystemPage() {
       </section>
 
       {/* Why France for Croatian Startups */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20 mt-16">
         <div
           
           

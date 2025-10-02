@@ -155,7 +155,7 @@ export default function EventsPage() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section className="bg-gray-50 dark:bg-gray-900 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
             
@@ -223,7 +223,7 @@ export default function EventsPage() {
       </section>
 
       {/* Past Events */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20 mt-16">
         <div
           
           
@@ -275,7 +275,7 @@ export default function EventsPage() {
       </section>
 
       {/* Host an Event */}
-      <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
+      <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
             
@@ -299,7 +299,7 @@ export default function EventsPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20 mt-16">
         <div
           
           
