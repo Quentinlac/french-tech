@@ -155,15 +155,15 @@ export default function EventsPage() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20 mt-16">
+      <section className="bg-navy-950 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
-            
-            
-            
-            
+
+
+
+
           >
-            <h2 className="text-3xl font-bold text-center mb-8">Upcoming Events</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-white">Upcoming Events</h2>
             <div className="grid lg:grid-cols-3 gap-8">
               {upcomingEvents.map((event, index) => (
                 <div
@@ -173,35 +173,35 @@ export default function EventsPage() {
                   
                   
                 >
-                  <Card hover className="h-full flex flex-col">
+                  <Card hover className="h-full flex flex-col bg-navy-900 border-navy-700">
                     <div className="mb-4">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="inline-block px-3 py-1 bg-accent/20 rounded-full text-xs font-medium text-accent-dark">
+                        <span className="inline-block px-3 py-1 bg-accent/30 rounded-full text-xs font-medium text-accent-light">
                           {event.type}
                         </span>
-                        <event.icon className="text-primary" size={24} />
+                        <event.icon className="text-primary-300" size={24} />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">
+                      <h3 className="text-xl font-bold mb-2 text-white">{event.title}</h3>
+                      <p className="text-navy-200 mb-4">
                         {event.description}
                       </p>
                     </div>
 
                     <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-sm text-gray-500">
+                      <div className="flex items-center text-sm text-navy-300">
                         <Calendar className="mr-2" size={16} />
                         {event.date}
                       </div>
-                      <div className="flex items-center text-sm text-gray-500">
+                      <div className="flex items-center text-sm text-navy-300">
                         <Clock className="mr-2" size={16} />
                         {event.time}
                       </div>
-                      <div className="flex items-center text-sm text-gray-500">
+                      <div className="flex items-center text-sm text-navy-300">
                         <MapPin className="mr-2" size={16} />
                         {event.location}
                       </div>
                       {event.attendees !== 'TBD' && (
-                        <div className="flex items-center text-sm text-gray-500">
+                        <div className="flex items-center text-sm text-navy-300">
                           <Users className="mr-2" size={16} />
                           Expected: {event.attendees} attendees
                         </div>
@@ -275,17 +275,17 @@ export default function EventsPage() {
       </section>
 
       {/* Host an Event */}
-      <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-20 mt-16">
+      <section className="bg-navy-950 py-20 mt-16">
         <div className="container mx-auto px-4">
           <div
-            
-            
-            
-            
+
+
+
+
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-4">Want to Partner?</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-white">Want to Partner?</h2>
+            <p className="text-lg text-navy-200 mb-8">
               We're always looking for venues, speakers, and partners to create meaningful events.
               Let's collaborate to bring the French and Croatian tech communities together.
             </p>
@@ -299,16 +299,17 @@ export default function EventsPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="container mx-auto px-4 py-20 mt-16">
+      <section className="bg-navy-950 py-20 mt-16">
+        <div className="container mx-auto px-4">
         <div
-          
-          
-          
-          
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12 text-center"
+
+
+
+
+          className="bg-navy-900 border border-navy-700 rounded-2xl shadow-lg p-8 md:p-12 text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">Never Miss an Event</h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
+          <h3 className="text-2xl font-bold mb-4 text-white">Never Miss an Event</h3>
+          <p className="text-navy-200 mb-6">
             Get notified about upcoming events, workshops, and networking opportunities.
           </p>
           <div className="max-w-md mx-auto">
@@ -319,18 +320,19 @@ export default function EventsPage() {
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 required
-                className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-900"
+                className="flex-1 px-4 py-2 border border-navy-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-navy-800 text-white placeholder-navy-400"
               />
               <Button variant="primary" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </Button>
             </form>
             {message && (
-              <p className={`text-sm mt-3 text-center ${message.type === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+              <p className={`text-sm mt-3 text-center ${message.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
                 {message.text}
               </p>
             )}
           </div>
+        </div>
         </div>
       </section>
     </div>
