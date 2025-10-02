@@ -138,7 +138,7 @@ export default function EventsPage() {
       </section>
 
       {/* Event Categories */}
-      <section className="container mx-auto px-4 mb-16">
+      <section className="container mx-auto px-4 mb-16 mt-20 pt-8">
         <div
           
           
