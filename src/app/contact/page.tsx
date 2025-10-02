@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Mail, MapPin, Linkedin, Send, CheckCircle } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -46,19 +45,13 @@ export default function ContactPage() {
   if (isSuccess) {
     return (
       <div className="min-h-screen py-20 flex items-center justify-center">
-        <div
-          
-          
-          
-        >
-          <Card className="max-w-md text-center p-8">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Thank you for reaching out. We'll get back to you within 24 hours.
-            </p>
-          </Card>
-        </div>
+        <Card className="max-w-md text-center p-8">
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+          <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
+          <p className="text-gray-600 dark:text-gray-400">
+            Thank you for reaching out. We'll get back to you within 24 hours.
+          </p>
+        </Card>
       </div>
     );
   }
@@ -67,12 +60,7 @@ export default function ContactPage() {
     <div className="min-h-screen py-20">
       {/* Hero Section */}
       <section className="container mx-auto px-4 mb-16">
-        <div
-          
-          
-          
-          className="text-center max-w-4xl mx-auto"
-        >
+        <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Get in <span className="text-primary">Touch</span>
           </h1>
@@ -83,15 +71,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 mb-24">
+      <div className="container mx-auto px-4 mb-20">
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Contact Information */}
-          <div
-            
-            
-            
-            className="lg:col-span-1"
-          >
+          <div className="lg:col-span-1">
             <div className="space-y-6">
               {/* Email */}
               <Card>
@@ -149,12 +132,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div
-            
-            
-            
-            className="lg:col-span-2"
-          >
+          <div className="lg:col-span-2">
             <Card className="p-8">
               <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -242,13 +220,8 @@ export default function ContactPage() {
       </div>
 
       {/* Quick Actions */}
-      <section className="container mx-auto px-4 mt-24 pt-16">
-        <div
-          
-          
-          
-          
-        >
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Quick Actions</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Card hover className="text-center p-6">
