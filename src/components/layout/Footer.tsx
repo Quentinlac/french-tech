@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Linkedin, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -44,10 +45,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">
-              <span className="text-primary-light">FIC</span>
-              <span className="text-secondary-light ml-1">Croatia</span>
-            </h3>
+            <div className="mb-4">
+              <Image
+                src="/logo-horizontal.png"
+                alt="French Innovation Club Croatia"
+                width={200}
+                height={57}
+                className="h-14 w-auto"
+              />
+            </div>
             <p className="text-gray-300 mb-4">
               French Innovation Club Croatia connects the French and Croatian startup ecosystems through events, community, and real opportunities for growth.
             </p>

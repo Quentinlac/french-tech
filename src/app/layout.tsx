@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: "French Tech, Croatian Tech, Startups, Innovation, Zagreb, Paris, Ecosystem, Entrepreneurship",
   authors: [{ name: "French Innovation Club Croatia" }],
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo-icon.svg',
   },
   openGraph: {
     title: "French Innovation Club Croatia",

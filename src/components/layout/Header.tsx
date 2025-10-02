@@ -57,7 +57,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/logo.png"
+              src="/logo-horizontal.png"
               alt="French Innovation Club Croatia"
               width={240}
               height={68}
