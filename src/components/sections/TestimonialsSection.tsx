@@ -55,6 +55,26 @@ const testimonials: Testimonial[] = [
     connection: '1st',
     timeAgo: '4h',
     text: 'Thank you very much for the invitation! After my Erasmus exchange studies at Sorbonne, and having lived in Paris and travelled across France, I fell in love with the language, the country, and its people. I am very happy to have this opportunity to maintain my connection with France, even though I am now back home working in Zagreb.'
+  },
+  {
+    name: 'Davor Anicic',
+    title: 'CEO and Co-founder at Velebit AI',
+    role: 'We help companies understand and apply AI on a large scale',
+    image: '/davor-anicic.jpeg',
+    companyLogo: '/velebit-ai-logo.svg',
+    connection: '1st',
+    timeAgo: '4m',
+    text: 'Thanks for organizing the event, looking forward to French Innovation Club Croatia take off! 🎉'
+  },
+  {
+    name: 'Stephanie E. Trpkov, DBA',
+    title: 'Agrodox® Founder | Climate Innovation | Industrial Transformation | Board Member',
+    role: 'Agrodox® Founder',
+    image: '/stephanie-trpkov.jpeg',
+    companyLogo: '/agrodox-logo.png',
+    connection: '1st',
+    timeAgo: '44m',
+    text: 'Excellent initiative Quentin and Guillaume! No progress without innovation, and with the support of strong institutional partners, bold leaps can be made. Félicitations!'
   }
 ];
 
