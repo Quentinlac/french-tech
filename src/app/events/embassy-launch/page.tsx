@@ -1,24 +1,34 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, MapPin, Users, ArrowLeft } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import Lightbox from '@/components/ui/Lightbox';
 
 export default function EmbassyLaunchPage() {
   const images = [
-    '/embassy-launch-01.jpeg',
-    '/embassy-launch-02.jpeg',
-    '/embassy-launch-03.jpeg',
-    '/embassy-launch-04.jpeg',
-    '/embassy-launch-05.jpeg',
-    '/embassy-launch-06.jpeg',
-    '/embassy-launch-07.jpeg',
-    '/embassy-launch-08.jpeg',
-    '/embassy-launch-09.jpeg',
-    '/embassy-launch-10.jpeg',
+    { src: '/embassy-launch-01.jpeg', alt: 'Embassy Launch Event 1' },
+    { src: '/embassy-launch-02.jpeg', alt: 'Embassy Launch Event 2' },
+    { src: '/embassy-launch-03.jpeg', alt: 'Embassy Launch Event 3' },
+    { src: '/embassy-launch-04.jpeg', alt: 'Embassy Launch Event 4' },
+    { src: '/embassy-launch-05.jpeg', alt: 'Embassy Launch Event 5' },
+    { src: '/embassy-launch-06.jpeg', alt: 'Embassy Launch Event 6' },
+    { src: '/embassy-launch-07.jpeg', alt: 'Embassy Launch Event 7' },
+    { src: '/embassy-launch-08.jpeg', alt: 'Embassy Launch Event 8' },
+    { src: '/embassy-launch-09.jpeg', alt: 'Embassy Launch Event 9' },
+    { src: '/embassy-launch-10.jpeg', alt: 'Embassy Launch Event 10' },
   ];
+
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
 
   return (
     <div className="min-h-screen py-20">
@@ -89,21 +99,36 @@ export default function EmbassyLaunchPage() {
         {/* Photo Gallery */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center">Event Gallery</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {images.map((image, index) => (
-              <Card key={index} className="overflow-hidden">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={image}
-                    alt={`Embassy Launch Event ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
+              <button
+                key={index}
+                onClick={() => openLightbox(index)}
+                className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
+                    View Full Image
+                  </span>
                 </div>
-              </Card>
+              </button>
             ))}
           </div>
         </section>
+
+        {/* Lightbox */}
+        <Lightbox
+          images={images}
+          initialIndex={lightboxIndex}
+          isOpen={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+        />
 
         {/* Closing */}
         <div className="prose prose-lg dark:prose-invert mx-auto mb-12">

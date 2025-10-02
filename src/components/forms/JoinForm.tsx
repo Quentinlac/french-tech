@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
-import { CheckCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, Loader2, AlertCircle } from 'lucide-react';
 
 const joinFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -107,7 +107,10 @@ const JoinForm = () => {
               placeholder="Your name"
             />
             {errors.name && (
-              <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+              <p className="text-error-500 text-sm mt-1 flex items-center gap-1 animate-slide-down">
+                <AlertCircle size={14} />
+                {errors.name.message}
+              </p>
             )}
           </div>
 
@@ -122,7 +125,10 @@ const JoinForm = () => {
               placeholder="you@example.com"
             />
             {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              <p className="text-error-500 text-sm mt-1 flex items-center gap-1 animate-slide-down">
+                <AlertCircle size={14} />
+                {errors.email.message}
+              </p>
             )}
           </div>
         </div>
@@ -194,7 +200,10 @@ const JoinForm = () => {
             ))}
           </div>
           {errors.involvement && (
-            <p className="text-red-500 text-sm mt-1">{errors.involvement.message}</p>
+            <p className="text-error-500 text-sm mt-1 flex items-center gap-1 animate-slide-down">
+              <AlertCircle size={14} />
+              {errors.involvement.message}
+            </p>
           )}
         </div>
 
