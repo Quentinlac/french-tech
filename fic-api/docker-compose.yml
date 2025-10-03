@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: fic-postgres
+    environment:
+      POSTGRES_DB: fic_db
+      POSTGRES_USER: fic_user
+      POSTGRES_PASSWORD: fic_password
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

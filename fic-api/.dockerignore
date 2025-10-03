@@ -1,0 +1,7 @@
+# Backend .dockerignore
+.git
+.gitignore
+README.md
+*.md
+.env
+docker-compose.yml
