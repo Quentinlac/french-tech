@@ -97,12 +97,6 @@ const WhoWeAreSection = () => {
                     </div>
                   </div>
 
-                  {member.story && (
-                    <blockquote className="italic text-gray-700 dark:text-gray-300 mb-4 pl-4 border-l-4 border-primary">
-                      "{member.story}"
-                    </blockquote>
-                  )}
-
                   <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                     {member.background.map((item, idx) => (
                       <li key={idx} className="flex items-start">
