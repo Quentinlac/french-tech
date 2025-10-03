@@ -33,7 +33,7 @@ export default function EmbassyLaunchPage() {
   }> = [
     {
       title: 'Personal Takeaway',
-      content: `I attended the French Innovation Club Croatia launch last night at the French Embassy, and one thing stuck with me:
+      content: `I attended the French Innovation Club Croatia launch this week at the French Embassy, and one thing stuck with me:
 Croatia's tech ecosystem is booming, and the world is finally paying attention.
 It was energizing to be in a room full of founders, investors, and ecosystem builders from both France and Croatia. Great initiative by @Quentin Lacointa and @Guillaume Rabhi to create this bridge.
 Looking forward to what comes next.
@@ -42,7 +42,7 @@ Looking forward to what comes next.
     },
     {
       title: '"I Was in the Room"',
-      content: `Last night at the French Embassy for the French Innovation Club Croatia launch.
+      content: `This week at the French Embassy for the French Innovation Club Croatia launch.
 The room was packed with people building the future of Croatian tech—founders from Rimac, Infobip, investors, accelerators, and legal minds navigating it all.
 What impressed me most: France is serious about connecting with our ecosystem. @Quentin Lacointa and @Guillaume Rabhi aren't just talking about it—they're building the infrastructure to make it happen.
 Excited to be part of this.
@@ -51,7 +51,7 @@ Excited to be part of this.
     },
     {
       title: 'Why I Showed Up',
-      content: `I showed up last night to the French Innovation Club Croatia launch because I believe Croatian tech deserves more international attention.
+      content: `I showed up this week to the French Innovation Club Croatia launch because I believe Croatian tech deserves more international attention.
 We have world-class companies here. We have talent. We have momentum.
 Seeing France formalize connections with our ecosystem through this initiative—organized by @Quentin Lacointa and @Guillaume Rabhi—feels like the right move at the right time.
 Count me in for what's next.
@@ -59,7 +59,7 @@ Count me in for what's next.
     },
     {
       title: 'The Conversations',
-      content: `Best part of last night's French Innovation Club Croatia launch? The conversations.
+      content: `Best part of this week's French Innovation Club Croatia launch? The conversations.
 I met [1-2 sentence about who you met or what you discussed].
 Croatia's tech scene is growing fast, and initiatives like this—bringing French and Croatian ecosystems together—create the kinds of connections that actually lead somewhere.
 Thanks @Quentin Lacointa and @Guillaume Rabhi for organizing.
@@ -68,7 +68,7 @@ Thanks @Quentin Lacointa and @Guillaume Rabhi for organizing.
     },
     {
       title: 'Personal + Ecosystem Observation',
-      content: `Attended the French Innovation Club Croatia launch last night.
+      content: `Attended the French Innovation Club Croatia launch this week.
 Here's what I'm seeing: More international ecosystems are recognizing that Croatia isn't just "emerging"—we're already here. Rimac, Infobip, Orca aren't flukes. They're proof of what's possible.
 France gets it. That's why @Quentin Lacointa and @Guillaume Rabhi launched this initiative to formally connect our ecosystems through events and community.
 Smart timing. Excited to see where this goes.
@@ -76,7 +76,7 @@ Smart timing. Excited to see where this goes.
     },
     {
       title: 'First-Person Story',
-      content: `I almost didn't go to the French Innovation Club Croatia launch last night.
+      content: `I almost didn't go to the French Innovation Club Croatia launch this week.
 Glad I did.
 The energy in the room, the quality of people, the conversations—it reminded me why I love this ecosystem. We're building something real here in Croatia, and seeing France invest in connecting with us validates that.
 Props to @Quentin Lacointa and @Guillaume Rabhi for making it happen.
@@ -86,7 +86,7 @@ See you at the next one.
     },
     {
       title: '"What I Learned"',
-      content: `What I learned at the French Innovation Club Croatia launch last night:
+      content: `What I learned at the French Innovation Club Croatia launch this week:
 
 • Croatia's tech ecosystem is on more international radars than I realized
 • There's real appetite for collaboration between French and Croatian startups
@@ -98,7 +98,7 @@ Thanks @Quentin Lacointa and @Guillaume Rabhi for organizing. Looking forward to
     },
     {
       title: 'Photo + Personal Reflection',
-      content: `Last night at the French Embassy for the French Innovation Club Croatia launch.
+      content: `This week at the French Embassy for the French Innovation Club Croatia launch.
 Packed room. Great energy. Real conversations about how French and Croatian tech ecosystems can work together.
 This is exactly the kind of initiative our ecosystem needs right now—structured connections, real events, tangible opportunities.
 Well done @Quentin Lacointa and @Guillaume Rabhi.
@@ -107,14 +107,14 @@ Well done @Quentin Lacointa and @Guillaume Rabhi.
     },
     {
       title: 'Short & Authentic',
-      content: `I was at the French Innovation Club Croatia launch last night.
+      content: `I was at the French Innovation Club Croatia launch this week.
 Great turnout, good people, real energy around connecting French and Croatian tech ecosystems.
 If you're building something or investing in this region, keep an eye on what @Quentin Lacointa and @Guillaume Rabhi are organizing.
 #FICCroatia`
     },
     {
       title: 'The "One Thing" Post',
-      content: `One thing stood out to me at last night's French Innovation Club Croatia launch:
+      content: `One thing stood out to me at this week's French Innovation Club Croatia launch:
 Croatia's tech scene has reached a point where other countries are building formal initiatives to connect with us—not because they're doing us a favor, but because they see opportunity.
 That's a shift worth paying attention to.
 Great work @Quentin Lacointa and @Guillaume Rabhi.
@@ -123,7 +123,7 @@ Great work @Quentin Lacointa and @Guillaume Rabhi.
     },
     {
       title: 'For People Who Are Getting Involved',
-      content: `I attended the French Innovation Club Croatia launch last night at the French Embassy.
+      content: `I attended the French Innovation Club Croatia launch this week at the French Embassy.
 What started as curiosity about the initiative turned into "how can I help?"
 Croatia's tech ecosystem is booming, and connecting it with France's creates real opportunities for everyone involved. @Quentin Lacointa and @Guillaume Rabhi are building something valuable here.
 Looking forward to contributing to what comes next.
@@ -132,7 +132,7 @@ Looking forward to contributing to what comes next.
     },
     {
       title: 'Founder Perspective',
-      content: `As a founder in Croatia, last night's French Innovation Club Croatia launch hit differently.
+      content: `As a founder in Croatia, this week's French Innovation Club Croatia launch hit differently.
 We're often looking outward for market access, partnerships, investment. Seeing France formalize connections with our ecosystem—through actual events and community, not just words—feels like momentum we can use.
 Thanks @Quentin Lacointa and @Guillaume Rabhi for creating this.
 #FICCroatia #Founders`,
